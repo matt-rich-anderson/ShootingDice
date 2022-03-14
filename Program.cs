@@ -11,32 +11,71 @@ namespace ShootingDice
             Player player1 = new Player();
             player1.Name = "Bob";
 
-            Player player2 = new Player();
+            Player player2 = new SmackTalkingPlayer();
             player2.Name = "Sue";
 
-            player2.Play(player1);
+            player1.Play(player2);
 
             Console.WriteLine("-------------------");
 
             Player player3 = new Player();
-            player3.Name = "Wilma";
+            player3.Name = "Tim";
 
-            player3.Play(player2);
+            Player player4 = new OneHigherPlayer();
+            player4.Name = "Eric";
+
+            player4.Play(player3);
+
+            Console.WriteLine("-------------------");
+            Player player5 = new Player();
+            player5.Name = "Jacob";
+
+            Player player6 = new HumanPlayer();
+            player6.Name = "Matt";
+
+            player6.Play(player5);
+
+            Console.WriteLine("-------------------");
+            
+            Player player7 = new Player();
+            player7.Name = "Jim";
+
+            Player player8 = new CreativeSmackTalkingPlayer();
+            player8.Name = "Derreck";
+
+            player8.Play(player7);
 
             Console.WriteLine("-------------------");
 
-            Player large = new LargeDicePlayer();
-            large.Name = "Bigun Rollsalot";
+            Player player9 = new Player();
+            player9.Name = "Bryce";
 
-            player1.Play(large);
+            Player player10 = new SoreLoserPlayer();
+            player10.Name = "Hunter";
+
+            player10.Play(player9);
 
             Console.WriteLine("-------------------");
 
-            List<Player> players = new List<Player>() {
-                player1, player2, player3, large
-            };
+            Player player11 = new Player();
+            player11.Name = "Joker";
 
-            PlayMany(players);
+            Player player12 = new UpperHalfPlayer();
+            player12.Name = "Riddler";
+
+            player12.Play(player11);
+
+            Console.WriteLine("-------------------");
+
+            Player player13 = new Player();
+            player13.Name = "Jack Burton";
+
+            Player player14 = new SoreLoserUpperHalfPlayer();
+            player14.Name = "Lo Pan";
+
+            player14.Play(player13);
+
+            Console.WriteLine("-------------------");
         }
 
         static void PlayMany(List<Player> players)

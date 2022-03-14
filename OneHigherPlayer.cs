@@ -2,15 +2,15 @@ using System;
 
 namespace ShootingDice
 {
-    // TODO: Complete this class
-
-    // Override the Play method to make a Player who always roles one higher than the other player
     public class OneHigherPlayer : Player
     {
         public override void Play(Player other)
         {
             int otherRoll = other.Roll();
             int myRoll = otherRoll + 1;
+            
+            //Currently only works when this player challenges another, doesn't work when challenged
+            //need to do an edge case if the opponent gets a six OneHIgher player shouldn't get a 7
 
             Console.WriteLine($"{Name} rolls a {myRoll}");
             Console.WriteLine($"{other.Name} rolls a {otherRoll}");

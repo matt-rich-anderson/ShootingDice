@@ -16,7 +16,7 @@ namespace ShootingDice
                     "Common, moneymoneymoney!",
                 };
             
-            string selectedTaunt = taunts[new Random().Next(3) + 1];
+            string selectedTaunt = taunts[new Random().Next(3)];
             
             Console.WriteLine(selectedTaunt);
             return new Random().Next(DiceSize) + 1;
